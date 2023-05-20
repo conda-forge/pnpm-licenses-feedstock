@@ -69,27 +69,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_nodejs14</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19465&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pnpm-licenses-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_nodejs14" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_nodejs16</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19465&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pnpm-licenses-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_nodejs16" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_nodejs18</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19465&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pnpm-licenses-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_nodejs18" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64_nodejs14</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19465&branchName=main">
