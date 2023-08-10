@@ -8,14 +8,13 @@ if errorlevel 1 exit 1
 popd
 
 dir %PREFIX%\Library\share\pnpm-licenses\node_modules\
-dir %PREFIX%\Library\share\pnpm-licenses\node_modules\pnpm-licenses
-dir %PREFIX%\Library\share\pnpm-licenses\node_modules\pnpm-licenses\bin
-exit 1
+dir %PREFIX%\Library\share\pnpm-licenses\node_modules\@quantco\pnpm-licenses
+dir %PREFIX%\Library\share\pnpm-licenses\node_modules\@quantco\pnpm-licenses\bin
 
 pushd %LIBRARY_PREFIX%\bin
 for %%c in (pnpm-licenses) do (
   echo @echo on >> %%c.bat
-  echo node %LIBRARY_PREFIX%\share\pnpm-licenses\node_modules\pnpm-licenses\bin\%%c "%%*" >> %%c.bat
+  echo node %LIBRARY_PREFIX%\share\pnpm-licenses\node_modules\@quantco\pnpm-licenses\bin\%%c "%%*" >> %%c.bat
 )
 popd
 
