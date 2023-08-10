@@ -3,10 +3,10 @@
 @rem source.url in meta.yaml references a tgz file which contains a fully-built pnpm-licenses
 @rem version, we now want to turn this back into a tgz file using pnpm pack and install it
 @rem globally from that.
-call pnpm install || goto :error
+cmd /c pnpm install
 if errorlevel 1 exit 1
 
-call pnpm pack || goto :error
+cmd /c pnpm pack
 if errorlevel 1 exit 1
 
 
