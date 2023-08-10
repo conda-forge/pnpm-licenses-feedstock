@@ -7,10 +7,11 @@ cmd /c "npm install --save @quantco/pnpm-licenses@%PKG_VERSION%"
 if errorlevel 1 exit 1
 popd
 
+md %LIBRARY_PREFIX%\bin
 pushd %LIBRARY_PREFIX%\bin
-for %%c in (pnpm) do (
+for %%c in (pnpm-licenses) do (
   echo @echo on >> %%c.bat
-  echo node %LIBRARY_PREFIX%\share\pnpm\node_modules\pnpm\bin\%%c "%%*" >> %%c.bat
+  echo node %LIBRARY_PREFIX%\share\pnpm-licenses\node_modules\pnpm-licenses\bin\%%c "%%*" >> %%c.bat
 popd
 
 cmd /c pnpm install --prod
