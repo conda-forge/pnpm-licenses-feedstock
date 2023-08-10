@@ -3,7 +3,7 @@
 md %LIBRARY_PREFIX%\share\pnpm-licenses
 pushd %LIBRARY_PREFIX%\share\pnpm-licenses
 md node_modules
-cmd /c "npm install --save pnpm-licenses@%PKG_VERSION%"
+cmd /c "npm install --save @quantco/pnpm-licenses@%PKG_VERSION%"
 if errorlevel 1 exit 1
 popd
 
