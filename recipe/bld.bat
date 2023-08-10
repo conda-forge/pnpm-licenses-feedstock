@@ -10,7 +10,7 @@ popd
 pushd %LIBRARY_PREFIX%\bin
 for %%c in (pnpm-licenses) do (
   echo @echo on >> %%c.bat
-  echo node %LIBRARY_PREFIX%\share\pnpm-licenses\node_modules\.bin\%%c "%%*" >> %%c.bat
+  echo node %LIBRARY_PREFIX%\share\pnpm-licenses\node_modules\.bin\%%c.cmd "%%*" >> %%c.bat
 )
 popd
 
