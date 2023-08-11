@@ -20,3 +20,5 @@ if errorlevel 1 exit 1
 @rem generate license disclaimer for pnpm-licenses itself :)
 pnpm-licenses generate-disclaimer --prod --output-file=third-party-licenses.txt
 if errorlevel 1 exit 1
+
+dir
