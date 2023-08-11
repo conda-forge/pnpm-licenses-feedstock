@@ -1,4 +1,4 @@
-@echo on
+@echo off
 
 md %LIBRARY_PREFIX%\share\pnpm-licenses
 pushd %LIBRARY_PREFIX%\share\pnpm-licenses
