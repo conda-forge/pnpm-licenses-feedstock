@@ -23,9 +23,9 @@ requirements:
 
 test:
   commands:
-    - test -d $PREFIX/lib/node_modules/@quantco/pnpm-licenses  # [unix]
-    - if not exist %LIBRARY_INC%\lib\node_modules\@quantco\pnpm-licenses exit 1  # [win]
     - pnpm-licenses --version
+    - test -d $PREFIX/lib/node_modules/@quantco/pnpm-licenses  # [unix]
+    - if not exist %LIBRARY_INC%\share\pnpm-licenses\node_modules\.bin\pnpm-licenses.cmd exit 1  # [win]
 
 about:
   home: https://github.com/Quantco/pnpm-licenses
