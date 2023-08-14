@@ -10,24 +10,22 @@ source:
   sha256: 33d0fb35181479f4439cb41a719f34a5a7371f9af1aa11440b64e96ee9388d28
 
 build:
-  # https://github.com/conda-forge/pnpm-feedstock/issues/31
-  skip: true  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
     - nodejs
   host:
     - nodejs
-    - pnpm
+    - pnpm >=8.6.12
   run:
     - nodejs
 
 test:
   commands:
-    - test -d $PREFIX/lib/node_modules/@quantco/pnpm-licenses  # [unix]
-    - if not exist %LIBRARY_INC%\lib\node_modules\@quantco\pnpm-licenses exit 1  # [win]
     - pnpm-licenses --version
+    - test -d $PREFIX/lib/node_modules/@quantco/pnpm-licenses  # [unix]
+    - if not exist %LIBRARY_INC%\share\pnpm-licenses\node_modules\.bin\pnpm-licenses.cmd exit 1  # [win]
 
 about:
   home: https://github.com/Quantco/pnpm-licenses
@@ -41,3 +39,4 @@ extra:
   recipe-maintainers:
     - JannikWibkerQC
     - pavelzw
+    - xhochy
