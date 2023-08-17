@@ -1,9 +1,5 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
-cdt_arch:
-- aarch64
 cdt_name:
-- cos7
+- cos6
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,6 +7,6 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 nodejs:
-- '16'
+- '20'
 target_platform:
-- linux-aarch64
+- linux-64
