@@ -1,5 +1,5 @@
 {% set name = "pnpm-licenses" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://registry.npmjs.org/@quantco/pnpm-licenses/-/pnpm-licenses-{{ version }}.tgz
-  sha256: ec2778d86290ebc93cbd80cdc844386fa2d40fa2d8eb2f738d69bf82e7df9531
+  sha256: 33a269335fc0d6d0e265cde2b4a76c534751a60594fab1a692ece561456af19c
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
