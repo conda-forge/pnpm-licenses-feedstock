@@ -27,10 +27,13 @@ requirements:
 tests:
   - script:
       - pnpm-licenses --version
-      - if: unix
-        then: test -d $PREFIX/lib/node_modules/@quantco/pnpm-licenses
-      - if: win
-        then: if not exist %LIBRARY_INC%\share\pnpm-licenses\node_modules\.bin\pnpm-licenses.cmd exit 1
+  - package_contents:
+      files:
+        - if: unix
+          then:
+            - lib/node_modules/@quantco/pnpm-licenses
+          else:
+            - share/pnpm-licenses/node_modules/.bin/pnpm-licenses.cmd
 
 about:
   license: MIT
