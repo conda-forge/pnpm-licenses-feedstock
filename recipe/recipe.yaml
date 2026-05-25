@@ -1,11 +1,10 @@
 schema_version: 1
 
 context:
-  name: pnpm-licenses
   version: "2.2.3"
 
 package:
-  name: ${{ name|lower }}
+  name: pnpm-licenses
   version: ${{ version }}
 
 source:
@@ -28,12 +27,16 @@ tests:
   - script:
       - pnpm-licenses --version
   - package_contents:
+      strict: true
+      bin:
+        - pnpm-licenses
       files:
         - if: unix
           then:
-            - lib/node_modules/@quantco/pnpm-licenses
+            - lib/node_modules/@quantco/pnpm-licenses/**/*
           else:
-            - share/pnpm-licenses/node_modules/.bin/pnpm-licenses.cmd
+            - Library/share/pnpm-licenses/**/*
+            - Library/share/pnpm-licenses/node_modules/.bin/pnpm-licenses.cmd
 
 about:
   license: MIT
