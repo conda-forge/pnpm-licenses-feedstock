@@ -16,6 +16,9 @@ ln -s $BUILD_PREFIX/bin/node $PREFIX/bin/node
 # globally from that.
 # as we are doing pnpm pack we still need to include the node_modules which we retrieve
 # using pnpm install
+if [ ! -f pnpm-workspace.yaml ]; then
+    echo "allowBuilds: {esbuild: true}" >> pnpm-workspace.yaml
+fi
 pnpm install
 pnpm pack
 
