@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.4.0"
+  version: "2.4.1"
 
 package:
   name: pnpm-licenses
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://registry.npmjs.org/@quantco/pnpm-licenses/-/pnpm-licenses-${{ version }}.tgz
-  sha256: 1168a44b2aa0080833b564340c90ff7c405f313c740a10d25443c422a77a7dde
+  sha256: 2c3fbb034adb23707942409d4a3e91535ef2fd4df3efa07e30eaf3206e129309
 
 build:
   number: 0
