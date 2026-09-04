@@ -19,6 +19,10 @@ ln -s $BUILD_PREFIX/bin/node $PREFIX/bin/node
 if [ ! -f pnpm-workspace.yaml ]; then
     echo "allowBuilds: {esbuild: true}" >> pnpm-workspace.yaml
 fi
+# Keep using conda's relocated pnpm binary. Newer pnpm releases otherwise
+# follow packageManager and download an unrelocated standalone binary, which
+# cannot find conda-provided runtime libraries such as libatomic on Linux.
+export PNPM_CONFIG_MANAGE_PACKAGE_MANAGER_VERSIONS=false
 pnpm install
 pnpm pack
 
