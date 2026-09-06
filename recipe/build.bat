@@ -1,5 +1,9 @@
 @echo on
 
+if "%target_platform%"=="win-arm64" (
+    set "npm_config_arch=arm64"
+)
+
 md %LIBRARY_PREFIX%\share\pnpm-licenses
 pushd %LIBRARY_PREFIX%\share\pnpm-licenses
 md node_modules
